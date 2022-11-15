@@ -10,17 +10,22 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="?page=cliente">Gerenciar Clientes</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Clientes</a></li>
+                    <li><a class="dropdown-item" href="?page=formCliente">Cadastrar Clientes</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="?page=vendedor">Gerenciar Vendedores</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Vendedores</a></li>
+                    <li><a class="dropdown-item" href="?page=formVendedor">Cadastrar Vendedores</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Gerenciar Usuário</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Usuário</a></li>
+                    <li><a class="dropdown-item" href="?page=parceiro">Gerenciar Parceiros</a></li>
+                    <li><a class="dropdown-item" href="?page=formParceiro">Cadastrar Parceiros</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="?page=usuario">Gerenciar Usuário</a></li>
+                    <li><a class="dropdown-item" href="?page=formUsuario">Cadastrar Usuário</a></li>
                 </ul>
             </div>
             <div class="dropdown me-3">
@@ -34,17 +39,17 @@
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="?page=produto">Gerenciar Produtos</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Produtos</a></li>
+                    <li><a class="dropdown-item" href="?page=formProduto">Cadastrar Produtos</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="?page=formaEntrega">Gerenciar Forma de Entrega</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Forma de Entrega</a></li>
+                    <li><a class="dropdown-item" href="?page=formFormaEntrega">Cadastrar Forma de Entrega</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="?page=raca">Gerenciar Raça</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Raça</a></li>
+                    <li><a class="dropdown-item" href="?page=formRaca">Cadastrar Raça</a></li>
                 </ul>
             </div>
 
@@ -54,12 +59,12 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="?page=planejamento">Gerenciar Planejameto</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Planejamento</a></li>
+                    <li><a class="dropdown-item" href="?page=formPlanejamento">Cadastrar Planejamento</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="?page=rota">Gerenciar Rotas</a></li>
-                    <li><a class="dropdown-item" href="#">Cadastrar Rotas</a></li>
+                    <li><a class="dropdown-item" href="?page=formRota">Cadastrar Rotas</a></li>
                 </ul>
             </div>
         </div>
@@ -79,21 +84,34 @@
                         include("./modules/src/cliente/index.php");
                         break;
                     case "formCliente":
-                        include("");
+                        include("./modules/src/cliente/formCliente.php");
+                        break;
+                    case "salvarCliente":
+                        include("./modules/src/cliente/salvarCliente.php");
                         break;
                         //vendedor
                     case "vendedor":
                         include("./modules/src/vendedor/index.php");
                         break;
                     case "formVendedor":
-                        include("");
+                        include("./modules/src/vendedor/formVendedor.php");
+                        break;
+                        //parceiro
+                    case "parceiro":
+                        include("./modules/src/parceiro/index.php");
+                        break;
+                    case "formParceiro":
+                        include("./modules/src/parceiro/formParceiro.php");
+                        break;
+                    case "salvarParceiro":
+                        include("./modules/src/parceiro/salvarParceiro.php");
                         break;
                         //usuario
                     case "usuario":
                         include("./modules/src/usuario/index.php");
                         break;
                     case "formUsuario":
-                        include("");
+                        include("./modules/src/usuario/formUsuario.php");
                         break;
                         //pedido
                     case "pedido":
@@ -107,35 +125,41 @@
                         include("./modules/src/produto/index.php");
                         break;
                     case "formProduto":
-                        include("");
+                        include("./modules/src/produto/formProduto.php");
+                        break;
+                    case "salvarProduto":
+                        include("./modules/src/produto/salvarProduto.php");
                         break;
                         //forma de entrega
                     case "formaEntrega":
                         include("./modules/src/formaEntrega/index.php");
                         break;
                     case "formFormaEntrega":
-                        include("");
+                        include("./modules/src/formaEntrega/formFormaEntrega.php");
                         break;
                         //raca
                     case "raca":
                         include("./modules/src/raca/index.php");
                         break;
                     case "formRaca":
-                        include("");
+                        include("./modules/src/raca/formRaca.php");
+                        break;
+                    case "salvarRaca":
+                        include("./modules/src/raca/salvarRaca.php");
                         break;
                         //planejamento
                     case "planejamento":
                         include("./modules/src/planejamento/index.php");
                         break;
                     case "formPlanejamento":
-                        include("");
+                        include("./modules/src/planejamento/formPlanejamento.php");
                         break;
                         //rota
                     case "rota":
                         include("./modules/src/rota/index.php");
                         break;
                     case "formRota":
-                        include("");
+                        include("./modules/src/rota/formRota.php");
                         break;
                     default:
                         include("./modules/home/index.php");
