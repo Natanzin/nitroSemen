@@ -96,6 +96,9 @@
                     case "formVendedor":
                         include("./modules/src/vendedor/formVendedor.php");
                         break;
+                    case "salvarVendedor":
+                        include("./modules/src/vendedor/salvarVendedor.php");
+                        break;
                         //parceiro
                     case "parceiro":
                         include("./modules/src/parceiro/index.php");
@@ -137,6 +140,9 @@
                     case "formFormaEntrega":
                         include("./modules/src/formaEntrega/formFormaEntrega.php");
                         break;
+                    case "salvarFormaEntrega":
+                        include("./modules/src/formaEntrega/salvarFormaEntrega.php");
+                        break;
                         //raca
                     case "raca":
                         include("./modules/src/raca/index.php");
@@ -160,6 +166,9 @@
                         break;
                     case "formRota":
                         include("./modules/src/rota/formRota.php");
+                        break;
+                    case "salvarRota":
+                        include("./modules/src/rota/salvarRota.php");
                         break;
                     default:
                         include("./modules/home/index.php");

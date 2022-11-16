@@ -9,13 +9,13 @@
         <label for="">Rota Nitrogênio*</label>
         <select required class="form-select" name="id_tipoProduto">
             <?php
-            $query = $conn->query("SELECT * FROM rota_nitrogenio ORDER BY nome_RotaNitrogenio");
+            $query = $conn->query("SELECT * FROM rota_nitrogenio ORDER BY nome_rotaNitrogenio");
             $registros = $query->fetch_all(MYSQLI_ASSOC);
             print_r($registros);
 
             foreach ($registros as $item) {
             ?>
-                <option value="<?php echo $item['id_rotaNitrogenio'] ?>"><?php echo $item['nome_RotaNitrogenio'] ?></option>
+                <option value="<?php echo $item['id_rotaNitrogenio'] ?>"><?php echo $item['nome_rotaNitrogenio'] ?></option>
             <?php
             }
             ?>
